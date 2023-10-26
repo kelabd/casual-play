@@ -6,6 +6,7 @@ Created on Wed Oct 25 22:18:10 2023
 """
 
 import pandas as pd
+from typing import List
 
 def createDataFrameFromList(student_data: List[List[int]]) -> pd.DataFrame:
 
