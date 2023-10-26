@@ -7,13 +7,24 @@ Created on Wed Oct 25 22:18:10 2023
 
 import pandas as pd
 
+def createDataFrameFromList(student_data: List[List[int]]) -> pd.DataFrame:
+
+    column_names = ['student_id', 'age']
+    
+    student_data_df = pd.DataFrame(student_data, columns = column_names)
+    
+    return student_data_df
+
+    
+    # There is room for improving this code by making it more robust to invalid entries
+    
+    
 student_data = [
-  [1, 15],
-  [2, 11],
-  [3, 11],
-  [4, 20]
-]
-
-student_data_df = pd.DataFrame(student_data)
-
-student_data_df = student_data_df.rename(columns = {0: "student_id", 1: "age"})
+    [0, 1],
+    [1, 5],
+    [2, 5],
+    [3, 8],
+    [4, 10]]
+    
+result = createDataFrameFromList(student_data)
+result.head()
